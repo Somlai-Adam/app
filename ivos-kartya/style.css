@@ -1,0 +1,189 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Arial,Helvetica,sans-serif;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#090b18;
+
+    overflow:hidden;
+
+    color:white;
+}
+
+.background{
+
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at 20% 20%,#7b2cff66,transparent 35%),
+    radial-gradient(circle at 80% 30%,#00d4ff55,transparent 35%),
+    radial-gradient(circle at 50% 90%,#ff008855,transparent 35%);
+
+    filter:blur(70px);
+}
+
+.container{
+
+    width:100%;
+    max-width:420px;
+
+    padding:20px;
+
+    text-align:center;
+
+    z-index:2;
+}
+
+h1{
+
+    margin-bottom:30px;
+
+    font-size:34px;
+}
+
+.card{
+
+    width:100%;
+    height:540px;
+
+    perspective:1200px;
+
+    cursor:pointer;
+}
+
+.card-inner{
+
+    width:100%;
+    height:100%;
+
+    position:relative;
+
+    transition:.7s;
+
+    transform-style:preserve-3d;
+}
+
+.card.flip .card-inner{
+
+    transform:rotateY(180deg);
+}
+
+.card-front,
+.card-back{
+
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    border-radius:35px;
+
+    backface-visibility:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:35px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+    0 0 35px #8b5cf6,
+    inset 0 0 20px rgba(255,255,255,.15);
+}
+
+.card-front{
+
+    gap:20px;
+}
+
+.logo{
+
+    font-size:90px;
+}
+
+.card-front h2{
+
+    font-size:34px;
+}
+
+.card-front p{
+
+    color:#cccccc;
+}
+
+.card-back{
+
+    transform:rotateY(180deg);
+}
+
+.card-back h2{
+
+    font-size:34px;
+
+    margin-bottom:25px;
+}
+
+.card-back p{
+
+    font-size:28px;
+
+    line-height:1.5;
+}
+
+button{
+
+    margin-top:35px;
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:linear-gradient(135deg,#6f2cff,#00c6ff);
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 0 20px #7b2cff;
+}
+
+button:hover{
+
+    transform:scale(1.03);
+}
+
+button:active{
+
+    transform:scale(.97);
+}

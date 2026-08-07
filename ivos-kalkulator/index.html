@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>🍻 Ivós Kalkulátor</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="container">
+
+    <div class="title">
+
+        <h1>🍻 Ivós Kalkulátor</h1>
+
+        <p>Számold ki, mennyi alkoholnak felel meg egy másik ital.</p>
+
+    </div>
+
+    <div class="tabs">
+
+        <button id="converterTab" class="tab active">
+            🍻 Átváltó
+        </button>
+
+        <button id="duelTab" class="tab">
+            🥊 Párbaj
+        </button>
+
+    </div>
+
+    <!-- ÁTVÁLTÓ -->
+
+    <div id="converterPage">
+
+        <div class="card">
+
+            <label>Mit ittál?</label>
+
+            <select id="fromDrink">
+
+                <option value="">Válassz italt...</option>
+
+                <option value="beer">🍺 Sör</option>
+                <option value="wine">🍷 Bor</option>
+                <option value="champagne">🥂 Pezsgő</option>
+                <option value="palinka">🥃 Pálinka</option>
+                <option value="jager">🦌 Jägermeister</option>
+                <option value="whiskey">🥃 Whiskey</option>
+                <option value="vodka">🍸 Vodka</option>
+                <option value="rum">🍹 Rum</option>
+                <option value="tequila">🌵 Tequila</option>
+                <option value="gin">🍸 Gin</option>
+
+            </select>
+
+            <label>Kiszerelés</label>
+
+            <select id="fromSize"></select>
+
+            <label>Darab</label>
+
+            <div class="counter">
+
+                <button id="minus">−</button>
+
+                <span id="count">1</span>
+
+                <button id="plus">+</button>
+
+            </div>
+
+            <label>Mire szeretnéd átváltani?</label>
+
+            <select id="toDrink">
+
+                <option value="">Válassz italt...</option>
+
+                <option value="beer">🍺 Sör</option>
+                <option value="wine">🍷 Bor</option>
+                <option value="champagne">🥂 Pezsgő</option>
+                <option value="palinka">🥃 Pálinka</option>
+                <option value="jager">🦌 Jägermeister</option>
+                <option value="whiskey">🥃 Whiskey</option>
+                <option value="vodka">🍸 Vodka</option>
+                <option value="rum">🍹 Rum</option>
+                <option value="tequila">🌵 Tequila</option>
+                <option value="gin">🍸 Gin</option>
+
+            </select>
+
+            <button id="calcButton">
+
+                🔄 Átváltás
+
+            </button>
+
+        </div>
+
+        <div class="resultCard">
+
+            <div class="resultTitle">
+
+                Eredmény
+
+            </div>
+
+            <div id="result">
+
+                👆 Válassz egy italt.
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- PÁRBAJ -->
+
+    <div id="duelPage" style="display:none;">
+
+        <div class="card">
+
+            <h2>🥊 Párbaj</h2>
+
+            <h3>👤 Játékos 1</h3>
+
+            <label>Ital</label>
+
+            <select id="p1Drink"></select>
+
+            <label>Kiszerelés</label>
+
+            <select id="p1Size"></select>
+
+            <label>Darab</label>
+
+            <div class="counter">
+
+                <button id="p1Minus">−</button>
+
+                <span id="p1Count">1</span>
+
+                <button id="p1Plus">+</button>
+
+            </div>
+
+            <button id="addP1">
+
+                ➕ Ital hozzáadása
+
+            </button>
+
+            <div id="player1List" class="drinkList"></div>
+
+            <hr>
+
+            <h3>👤 Játékos 2</h3>
+
+            <label>Ital</label>
+
+            <select id="p2Drink"></select>
+
+            <label>Kiszerelés</label>
+
+            <select id="p2Size"></select>
+
+            <label>Darab</label>
+
+            <div class="counter">
+
+                <button id="p2Minus">−</button>
+
+                <span id="p2Count">1</span>
+
+                <button id="p2Plus">+</button>
+
+            </div>
+
+            <button id="addP2">
+
+                ➕ Ital hozzáadása
+
+            </button>
+
+            <div id="player2List" class="drinkList"></div>
+
+            <button id="fightButton">
+
+                ⚔️ PÁRBAJ!
+
+            </button>
+
+        </div>
+
+        <div class="resultCard">
+
+            <div class="resultTitle">
+
+                Párbaj eredménye
+
+            </div>
+
+            <div id="duelResult">
+
+                Adj hozzá italokat mindkét játékosnak!
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
