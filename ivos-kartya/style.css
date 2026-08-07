@@ -5,22 +5,13 @@
 }
 
 body{
-
     font-family:Arial,Helvetica,sans-serif;
-
-    height:100vh;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
+    min-height:100vh;
     background:#090b18;
-
-    overflow:hidden;
-
     color:white;
+
+    overflow-x:hidden;
+    overflow-y:auto;
 }
 
 .background{
@@ -37,15 +28,20 @@ body{
 }
 
 .container{
-
     width:100%;
     max-width:420px;
-
-    padding:20px;
-
+    margin:0 auto;
+    padding:16px;
     text-align:center;
-
     z-index:2;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+
+    min-height:100vh;
+
+    padding-top:20px;
 }
 
 h1{
@@ -56,13 +52,12 @@ h1{
 }
 
 .card{
-
     width:100%;
+    max-width:100%;
     height:540px;
-
     perspective:1200px;
-
     cursor:pointer;
+    overflow:hidden;
 }
 
 .card-inner{
@@ -84,35 +79,22 @@ h1{
 
 .card-front,
 .card-back{
-
     position:absolute;
-
     width:100%;
     height:100%;
-
     border-radius:35px;
-
     backface-visibility:hidden;
-
     display:flex;
-
     flex-direction:column;
-
     justify-content:center;
-
     align-items:center;
-
-    padding:35px;
-
+    padding:28px;
     background:rgba(255,255,255,.08);
-
     backdrop-filter:blur(20px);
-
     border:1px solid rgba(255,255,255,.15);
-
     box-shadow:
-    0 0 35px #8b5cf6,
-    inset 0 0 20px rgba(255,255,255,.15);
+        0 0 35px #8b5cf6,
+        inset 0 0 20px rgba(255,255,255,.15);
 }
 
 .card-front{
@@ -155,27 +137,16 @@ h1{
 }
 
 button{
-
-    margin-top:35px;
-
+   margin-top:18px;
     width:100%;
-
     padding:18px;
-
     border:none;
-
     border-radius:18px;
-
     background:linear-gradient(135deg,#6f2cff,#00c6ff);
-
     color:white;
-
     font-size:22px;
-
     cursor:pointer;
-
-    box-shadow:
-    0 0 20px #7b2cff;
+    box-shadow:0 0 20px #7b2cff;
 }
 
 button:hover{
@@ -186,4 +157,53 @@ button:hover{
 button:active{
 
     transform:scale(.97);
+}
+
+html,
+body{
+    width:100%;
+    overflow-x:hidden;
+}
+
+*{
+    max-width:100%;
+}
+
+@media (max-width:430px){
+
+    .container{
+        padding:14px;
+    }
+
+    h1{
+        font-size:28px;
+    }
+
+    .card{
+        height:500px;
+    }
+
+    .card-front,
+    .card-back{
+        padding:22px;
+    }
+
+    .logo{
+        font-size:72px;
+    }
+
+    .card-front h2,
+    .card-back h2{
+        font-size:28px;
+    }
+
+    .card-back p{
+        font-size:22px;
+    }
+
+    button{
+        font-size:18px;
+        padding:16px;
+    }
+
 }
