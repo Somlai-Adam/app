@@ -62,7 +62,10 @@ card.onclick=()=>{
     card.classList.toggle("flip");
 }
 
-next.onclick=()=>{
+next.onclick = () => {
+    card.classList.remove("flip");
 
-    randomCard();
-}
+    setTimeout(() => {
+        randomCard();
+    }, 500);
+};
