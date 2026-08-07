@@ -1,40 +1,64 @@
 const cards = [
-
 {
-title:"🍺 Igyál!",
-text:"Minden játékos iszik 2 kortyot."
+title:"🗣️ Legkínosabb szexuális élmény",
+text:"Mindenki mond egyet. Akié a leggázabb, az iszik."
 },
-
 {
-title:"😂 Nevetés",
-text:"Aki utoljára nevetett, iszik."
+title:"🎵 Drink Me",
+text:"Innod kell egy Sára Dalma kombót."
 },
-
 {
-title:"🎲 Véletlen",
-text:"Válassz valakit. Iszik 3 kortyot."
+title:"🥤 Itasd meg!",
+text:"Itasd meg a melletted ülőket!"
 },
-
 {
-title:"👑 Király",
-text:"Te osztod ki a következő 5 kortyot."
+title:"📞 Chat",
+text:"Mindenkinek fel kell olvasnia az utolsó üzenetét a telefonján. Aki nem meri, az iszik."
 },
-
 {
-title:"🔥 Kihívás",
-text:"Mondd el az első szerelmed nevét vagy igyál 5 kortyot."
+title:"❤️ Volt partnered",
+text:"Ki volt a legjobb és a legrosszabb partnered? Név nélkül, de sztorival!"
 },
-
 {
-title:"🤫 Titok",
-text:"Mesélj egy kínos történetet."
+title:"🥃 Shot",
+text:"Hívj meg valakit egy shotra!"
 },
-
 {
-title:"🎉 Mindenki",
-text:"Egyszerre iszik mindenki."
+title:"💎 Piercing",
+text:"Az iszik, akinek van piercingje."
+},
+{
+title:"🌊 Orgazmus",
+text:"Igyál, ha játszottál már meg orgazmust!"
+},
+{
+title:"📷 Meztelen fotó",
+text:"Igyál, ha küldtél vagy kaptál már meztelen fotót!"
+},
+{
+title:"🤔 Tippelj",
+text:"Szerinted ki nézett már pornót a partnerével együtt? Ha eltaláltad, kioszthatsz 1 shotot. Ha nem, te iszol."
+},
+{
+title:"🍸 Feladat",
+text:"Találj ki egy feladatot a többieknek! Aki nem csinálja meg az igyon"
+},
+{
+title:"🍑 Tippelj",
+text:"Szerinted kik küldtek már magukról szexibb képet? Tippeld meg mindenkiről,Ahányat tévedtél annyit iszol"
+},
+{
+title:"🔒 Titok",
+text:"Igyál egyet, ha van olyan titkod, amit senkinek nem mondanál el."
+},
+{
+title:"🧠 Első benyomás",
+text:"Meséld el, mit gondoltál először a többiekről, vagy igyál egyet."
+},
+{
+title:"🎂 Szülinap",
+text:"Kioszthatsz annyi kortyot ahány éves vagy"
 }
-
 ];
 
 const card=document.getElementById("card");
