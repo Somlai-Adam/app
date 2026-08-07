@@ -46,9 +46,8 @@ h1 {
 
 .card {
     width: 100%;
-    height: 540px;
-    perspective: 1200px;
-    cursor: pointer;
+    aspect-ratio: 3 / 4;
+    height: auto;
     margin-bottom: 20px;
 }
 
